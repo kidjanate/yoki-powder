@@ -4,19 +4,28 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>gay</title>
 </head>
 <body style="background-color: black; overflow: hidden;">
     <center>
-        <div style="width: 100%; height: 100vh; position: absolute; display: flex; justify-content: center; align-items: center;">
-            <h1 style="font-size: 50px; background-color: white; position: absolute; z-index: 90;">You got it</h1>
+        <div style="width: 100%; height: 100vh; position: absolute; display: flex; justify-content: center; align-items: center; z-index: 999;">
+            <p id="btn" style="padding: 20px; background-color: rgb(162, 0, 255); font-weight: 600; font-size: 40px;">Click to start</p>
+            <h1 id="title" style="font-size: 50px; background-color: white; position: absolute; z-index: 90;">You got it</h1>
         </div>
-        <video controls autoplay loop style="transform: translateY(-200px);">
+        <video id="vdo" controls autoplay loop style="transform: translateY(-200px);">
             <source src="bg.mp4" type="video/mp4">
             Your browser does not support the video tag.
           </video>
     </center>
 </body>
 <script>
+    document.getElementById('vdo').style.display = 'none';
+    document.getElementById('title').style.display = 'none';
+    document.getElementById('btn').addEventListener('click', function(){
+        document.getElementById('title').style.display = null;
+        document.getElementById('vdo').style.display = null;
+        document.getElementById('vdo').play();
+        document.getElementById('btn').style.display = 'none';
+    });
 </script>
 </html>
